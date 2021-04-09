@@ -1,0 +1,34 @@
+<div class="form">
+    <h1>Formulário de Cadastro</h1>
+    <mat-form-field appearance="outline">
+        <mat-label>Nome completo</mat-label>
+        <input matInput [(ngModel)]="usuario.nome" name="nome">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>CPF</mat-label>
+        <input matInput [(ngModel)]="usuario.cpf" name="cpf">
+    </mat-form-field>
+    <div class="formcep">
+        <mat-form-field appearance="outline">
+            <mat-label>CEP</mat-label>
+            <input matInput [(ngModel)]="usuario.cep" name="cep">
+        </mat-form-field>
+        <button mat-mini-fab color="primary" (click)="buscaCep()">
+            <mat-icon>search</mat-icon>
+        </button>
+    </div>
+    <mat-form-field appearance="outline">
+        <mat-label>Logradouro</mat-label>
+        <input matInput [disabled]='true' [(ngModel)]="usuario.endereco.logradouro" name="logradouro">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Bairro</mat-label>
+        <input matInput [disabled]='true' [(ngModel)]="usuario.endereco.bairro" name="bairro">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Localidade</mat-label>
+        <input matInput [disabled]='true' [(ngModel)]="usuario.endereco.localidade" name="localidade">
+    </mat-form-field>
+    <br>
+    <button mat-flat-button color="primary" (click)="salva()">Salvar</button>
+</div>
